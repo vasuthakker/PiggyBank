@@ -9,7 +9,11 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.util.Log;
-
+/**
+ * Helper class for Billing information
+ * @author Viral
+ *
+ */
 public class BillHelper {
 
 	private static final String TABLE_NAME = "BILLS";
