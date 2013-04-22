@@ -1,0 +1,570 @@
+Found a 23 line (119 tokens) duplication in the following files: 
+Starting at line 208 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\BillActivity.java
+Starting at line 237 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\BillActivity.java
+
+	public class DueDatePickerDialogue extends DialogFragment implements
+			DatePickerDialog.OnDateSetListener {
+
+		@Override
+		public Dialog onCreateDialog(Bundle savedInstanceState)
+		{
+			// Use the current date as the default date in the picker
+			final Calendar c = Calendar.getInstance();
+			int year = c.get(Calendar.YEAR);
+			int month = c.get(Calendar.MONTH);
+			int day = c.get(Calendar.DAY_OF_MONTH);
+
+			// Create a new instance of DatePickerDialog and return it
+			return new DatePickerDialog(getActivity(), this, year, month, day);
+		}
+
+		@Override
+		public void onDateSet(android.widget.DatePicker view, int year,
+				int monthOfYear, int dayOfMonth)
+		{
+			Calendar calender = new GregorianCalendar(year, monthOfYear,
+					dayOfMonth);
+			long date = calender.getTimeInMillis();
+=====================================================================
+Found a 9 line (96 tokens) duplication in the following files: 
+Starting at line 83 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\accountspage.java
+Starting at line 116 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\SplashActivity.java
+
+				editor.putString(AppConstants.BALANCE, balance);
+				editor.putString(AppConstants.DAILYLIMIT, String.valueOf(limit.getDaily_limit()));
+				editor.putString(AppConstants.WEEKLYLIMIT, String.valueOf(limit.getWeekly_limit()));
+				editor.putString(AppConstants.MONTHLYLIMIT, String.valueOf(limit.getMonthly_limit()));
+				editor.putString(AppConstants.YEARLYLIMIT, String.valueOf(limit.getYearly_limit()));
+				editor.commit();
+				
+				Intent intent = new Intent(getApplicationContext(),
+						PiggyBank.class);
+=====================================================================
+Found a 18 line (93 tokens) duplication in the following files: 
+Starting at line 148 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\transactionpage.java
+Starting at line 211 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\BillActivity.java
+Starting at line 240 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\BillActivity.java
+
+		@Override
+		public Dialog onCreateDialog(Bundle savedInstanceState)
+		{
+			// Use the current date as the default date in the picker
+			final Calendar c = Calendar.getInstance();
+			int year = c.get(Calendar.YEAR);
+			int month = c.get(Calendar.MONTH);
+			int day = c.get(Calendar.DAY_OF_MONTH);
+
+			// Create a new instance of DatePickerDialog and return it
+			return new DatePickerDialog(getActivity(), this, year, month, day);
+		}
+
+		@Override
+		public void onDateSet(android.widget.DatePicker view, int year,
+				int monthOfYear, int dayOfMonth)
+		{
+			Calendar calendar = new GregorianCalendar(year, monthOfYear,
+=====================================================================
+Found a 14 line (86 tokens) duplication in the following files: 
+Starting at line 69 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\TransactionDetailActivity.java
+Starting at line 74 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\LazyAdapter4Activites.java
+
+		if (transaction.getT_type() == AppConstants.INCOME)
+		{
+			typeTextView.setTextColor(Color.rgb(36, 147, 51));
+			typeTextView.setText("INCOME");
+		} else
+		{
+			typeTextView.setTextColor(Color.RED);
+			typeTextView.setText("EXPENSE");
+		}
+
+		dateTextView.setText(DateFormat.format("dd-MMM-yyyy",
+				transaction.getT_date()));
+		String category = transaction.getT_category();
+		if (category.equalsIgnoreCase("shopping"))
+=====================================================================
+Found a 25 line (83 tokens) duplication in the following files: 
+Starting at line 120 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\accountspage.java
+Starting at line 27 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\LazyAdapter4Bills.java
+Starting at line 27 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\LazyAdapter4Activites.java
+
+			inflater = (LayoutInflater) activity
+					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+		}
+
+		public int getCount()
+		{
+			return data.size();
+		}
+
+		public Object getItem(int position)
+		{
+			return position;
+		}
+
+		public long getItemId(int position)
+		{
+			return position;
+		}
+
+		public View getView(int position, View convertView, ViewGroup parent)
+		{
+			View vi = convertView;
+			if (convertView == null)
+				vi = inflater.inflate(R.layout.account_row, null);
+=====================================================================
+Found a 6 line (82 tokens) duplication in the following files: 
+Starting at line 83 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\accountspage.java
+Starting at line 116 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\SplashActivity.java
+Starting at line 215 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\SettingFragment.java
+
+				editor.putString(AppConstants.BALANCE, balance);
+				editor.putString(AppConstants.DAILYLIMIT, String.valueOf(limit.getDaily_limit()));
+				editor.putString(AppConstants.WEEKLYLIMIT, String.valueOf(limit.getWeekly_limit()));
+				editor.putString(AppConstants.MONTHLYLIMIT, String.valueOf(limit.getMonthly_limit()));
+				editor.putString(AppConstants.YEARLYLIMIT, String.valueOf(limit.getYearly_limit()));
+				editor.commit();
+=====================================================================
+Found a 14 line (78 tokens) duplication in the following files: 
+Starting at line 69 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\accountspage.java
+Starting at line 103 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\SplashActivity.java
+
+				limit.setAccount_name(account);
+				limit.setDaily_limit(1000);
+				limit.setWeekly_limit(7000);
+				limit.setMonthly_limit(30000);
+				limit.setYearly_limit(200000);
+				LimitsHelper.addLimit(getApplicationContext(), limit);
+				
+				SharedPreferences preference = getSharedPreferences(
+						AppConstants.PIGGYBANKSAHREDPREFERNECE, 0);
+				
+				Editor editor = preference.edit();
+				editor.remove(AppConstants.ACCOUNT);
+				editor.remove(AppConstants.BALANCE);
+				editor.putString(AppConstants.ACCOUNT, account);
+=====================================================================
+Found a 7 line (48 tokens) duplication in the following files: 
+Starting at line 151 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\MainPage.java
+Starting at line 182 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\MainPage.java
+
+					todayincome += transaction.getT_amount();
+				}
+				if (calNow.get(Calendar.WEEK_OF_YEAR) == calTransaction
+						.get(Calendar.WEEK_OF_YEAR)
+						&& (calNow.get(Calendar.YEAR) == calTransaction
+								.get(Calendar.YEAR)))
+				{
+=====================================================================
+Found a 8 line (48 tokens) duplication in the following files: 
+Starting at line 158 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\MainPage.java
+Starting at line 190 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\MainPage.java
+
+					weekincome += transaction.getT_amount();
+
+				}
+				if (calNow.get(Calendar.MONTH) == calTransaction
+						.get(Calendar.MONTH)
+						&& (calNow.get(Calendar.YEAR) == calTransaction
+								.get(Calendar.YEAR)))
+				{
+=====================================================================
+Found a 8 line (45 tokens) duplication in the following files: 
+Starting at line 94 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\ViewBillActivity.java
+Starting at line 66 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\DeletedBillsActivity.java
+
+		billListView.setOnItemLongClickListener(new OnItemLongClickListener() {
+
+			@Override
+			public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
+					int position, long arg3)
+			{
+				Bill bill = billList.get(position);
+				bill.setIsActive(AppConstants.INACTIVESTATUS);
+=====================================================================
+Found a 7 line (43 tokens) duplication in the following files: 
+Starting at line 144 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\MainPage.java
+Starting at line 175 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\MainPage.java
+
+			if (transaction.getT_type() == AppConstants.INCOME)
+			{
+				if (calNow.get(Calendar.DAY_OF_YEAR) == calTransaction
+						.get(Calendar.DAY_OF_YEAR)
+						&& (calNow.get(Calendar.YEAR) == calTransaction
+								.get(Calendar.YEAR)))
+				{
+=====================================================================
+Found a 7 line (40 tokens) duplication in the following files: 
+Starting at line 52 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\DeletedTransactionsActivity.java
+Starting at line 51 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\DeletedBillsActivity.java
+
+					.setOnItemClickListener(new OnItemClickListener() {
+
+						@Override
+						public void onItemClick(AdapterView<?> arg0, View arg1,
+								int position, long arg3)
+						{
+							Intent intent = new Intent(getApplicationContext(),
+=====================================================================
+Found a 5 line (38 tokens) duplication in the following files: 
+Starting at line 34 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\DeletedTransactionsActivity.java
+Starting at line 34 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\DeletedBillsActivity.java
+
+		db = new DatabaseHandler(this);
+		SharedPreferences preference = getSharedPreferences(
+				AppConstants.PIGGYBANKSAHREDPREFERNECE, this.MODE_PRIVATE);
+		String accountName = preference.getString(AppConstants.ACCOUNT, "");
+		baseLayout=(LinearLayout)findViewById(R.id.delted_transaction_base_layout);
+=====================================================================
+Found a 9 line (36 tokens) duplication in the following files: 
+Starting at line 44 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\ViewBillActivity.java
+Starting at line 51 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\SettingFragment.java
+
+		return inflater.inflate(R.layout.activity_view_bill, containter, false);
+	}
+
+	@Override
+	public void onStart()
+	{
+		super.onStart();
+
+		addNewBillButton = (Button) getActivity().findViewById(R.id.newbill);
+=====================================================================
+Found a 7 line (36 tokens) duplication in the following files: 
+Starting at line 52 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\DeletedTransactionsActivity.java
+Starting at line 51 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\DeletedBillsActivity.java
+Starting at line 137 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\Activitiespage.java
+
+					.setOnItemClickListener(new OnItemClickListener() {
+
+						@Override
+						public void onItemClick(AdapterView<?> arg0, View arg1,
+								int position, long arg3)
+						{
+							Intent intent = new Intent(getApplicationContext(),
+=====================================================================
+Found a 7 line (36 tokens) duplication in the following files: 
+Starting at line 36 of C:\Users\Viral\workspace\piggy_bank1\src\proj\utility\Utility.java
+Starting at line 68 of C:\Users\Viral\workspace\piggy_bank1\src\proj\utility\Utility.java
+
+	public static void setBackGround(LinearLayout layout,SharedPreferences preferences)
+	{
+		SharedPreferences preference=preferences;
+		String backgorundColor=preference.getString(AppConstants.BACKGROUNDCOLOR, AppConstants.BLUECOLOR);
+		
+		if(backgorundColor.equalsIgnoreCase(AppConstants.GREENCOLOR))
+		{
+=====================================================================
+Found a 4 line (34 tokens) duplication in the following files: 
+Starting at line 65 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\BillActivity.java
+Starting at line 76 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\Activitiespage.java
+
+		SharedPreferences preference = getSharedPreferences(
+				AppConstants.PIGGYBANKSAHREDPREFERNECE, Context.MODE_PRIVATE);
+		account = preference.getString(AppConstants.ACCOUNT, null);
+		balance = preference.getString(AppConstants.BALANCE, null);
+=====================================================================
+Found a 9 line (32 tokens) duplication in the following files: 
+Starting at line 106 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\ViewBillActivity.java
+Starting at line 171 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\Activitiespage.java
+
+			}
+		});
+	}
+
+	@Override
+	public void onResume()
+	{
+		super.onResume();
+		baseLayout=(LinearLayout)getActivity().findViewById(R.id.viewbill_base_layout);
+=====================================================================
+Found a 5 line (31 tokens) duplication in the following files: 
+Starting at line 91 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\accountspage.java
+Starting at line 292 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\SettingFragment.java
+
+						PiggyBank.class);
+				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+				intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				startActivity(intent);
+=====================================================================
+Found a 7 line (31 tokens) duplication in the following files: 
+Starting at line 81 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\ViewBillActivity.java
+Starting at line 52 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\DeletedTransactionsActivity.java
+Starting at line 51 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\DeletedBillsActivity.java
+Starting at line 137 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\Activitiespage.java
+
+		billListView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1,
+					int position, long arg3)
+			{
+				Intent billDetailIntent = new Intent(context,
+=====================================================================
+Found a 6 line (30 tokens) duplication in the following files: 
+Starting at line 94 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\ViewBillActivity.java
+Starting at line 67 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\DeletedTransactionsActivity.java
+Starting at line 66 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\DeletedBillsActivity.java
+
+		billListView.setOnItemLongClickListener(new OnItemLongClickListener() {
+
+			@Override
+			public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
+					int position, long arg3)
+			{
+=====================================================================
+Found a 6 line (29 tokens) duplication in the following files: 
+Starting at line 39 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\ViewBillActivity.java
+Starting at line 46 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\MainPage.java
+
+	SharedPreferences preference=null;
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup containter,
+			Bundle savedInstanceState)
+	{
+		return inflater.inflate(R.layout.activity_view_bill, containter, false);
+=====================================================================
+Found a 7 line (29 tokens) duplication in the following files: 
+Starting at line 108 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\ViewBillActivity.java
+Starting at line 248 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\MainPage.java
+Starting at line 173 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\Activitiespage.java
+
+	}
+
+	@Override
+	public void onResume()
+	{
+		super.onResume();
+		baseLayout=(LinearLayout)getActivity().findViewById(R.id.viewbill_base_layout);
+=====================================================================
+Found a 7 line (29 tokens) duplication in the following files: 
+Starting at line 58 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\DeletedTransactionsActivity.java
+Starting at line 143 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\Activitiespage.java
+
+							Intent intent = new Intent(getApplicationContext(),
+									TransactionDetailActivity.class);
+							intent.putExtra(AppConstants.TRANSACTION,
+									transactionList.get(position));
+							startActivity(intent);
+						}
+					});
+=====================================================================
+Found a 13 line (29 tokens) duplication in the following files: 
+Starting at line 86 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\DeletedTransactionsActivity.java
+Starting at line 78 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\DeletedBillsActivity.java
+
+							activitiesAdapter.notifyDataSetChanged();
+							return true;
+						}
+					});
+		}
+
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu)
+	{
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.activity_deleted_transactions, menu);
+=====================================================================
+Found a 7 line (28 tokens) duplication in the following files: 
+Starting at line 81 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\transactionpage.java
+Starting at line 80 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\BillActivity.java
+Starting at line 92 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\BillActivity.java
+
+		transactionDate.setOnFocusChangeListener(new OnFocusChangeListener() {
+
+			@Override
+			public void onFocusChange(View v, boolean hasFocus)
+			{
+				if (hasFocus == true)
+				{
+=====================================================================
+Found a 6 line (28 tokens) duplication in the following files: 
+Starting at line 166 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\MainPage.java
+Starting at line 198 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\MainPage.java
+
+					monthincome += transaction.getT_amount();
+
+				}
+				if (calNow.get(Calendar.YEAR) == calTransaction
+						.get(Calendar.YEAR))
+				{
+=====================================================================
+Found a 4 line (28 tokens) duplication in the following files: 
+Starting at line 79 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\DeletedTransactionsActivity.java
+Starting at line 127 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\Activitiespage.java
+
+							db.updateRecord(AppConstants.TABLETRANSACTION, cv,
+									DatabaseHandler.KEY_T_ID,
+									String.valueOf(transaction.getT_id()));
+							Toast.makeText(getApplicationContext(),
+=====================================================================
+Found a 6 line (27 tokens) duplication in the following files: 
+Starting at line 39 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\ViewBillActivity.java
+Starting at line 46 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\MainPage.java
+Starting at line 49 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\Activitiespage.java
+
+	SharedPreferences preference=null;
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup containter,
+			Bundle savedInstanceState)
+	{
+		return inflater.inflate(R.layout.activity_view_bill, containter, false);
+=====================================================================
+Found a 6 line (27 tokens) duplication in the following files: 
+Starting at line 53 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\ViewBillActivity.java
+Starting at line 83 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\Activitiespage.java
+
+		addNewBillButton.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v)
+			{
+				Intent intent = new Intent(getActivity(), BillActivity.class);
+=====================================================================
+Found a 5 line (27 tokens) duplication in the following files: 
+Starting at line 94 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\ViewBillActivity.java
+Starting at line 67 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\DeletedTransactionsActivity.java
+Starting at line 66 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\DeletedBillsActivity.java
+Starting at line 115 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\Activitiespage.java
+
+		billListView.setOnItemLongClickListener(new OnItemLongClickListener() {
+
+			@Override
+			public boolean onItemLongClick(AdapterView<?> arg0, View arg1,
+					int position, long arg3)
+=====================================================================
+Found a 6 line (27 tokens) duplication in the following files: 
+Starting at line 61 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\MainPage.java
+Starting at line 70 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\Activitiespage.java
+
+		Intent intent = getActivity().getIntent();
+
+		preference = getActivity().getSharedPreferences(
+				AppConstants.PIGGYBANKSAHREDPREFERNECE, Context.MODE_PRIVATE);
+
+		account = preference.getString(AppConstants.ACCOUNT, "");
+=====================================================================
+Found a 5 line (26 tokens) duplication in the following files: 
+Starting at line 54 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\transactionpage.java
+Starting at line 36 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\TransactionDetailActivity.java
+
+		datasource = new DatabaseHandler(this);
+
+		SharedPreferences preference = getSharedPreferences(
+				AppConstants.PIGGYBANKSAHREDPREFERNECE, Context.MODE_PRIVATE);
+		accountName = preference.getString(AppConstants.ACCOUNT, null);
+=====================================================================
+Found a 8 line (26 tokens) duplication in the following files: 
+Starting at line 100 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\accountspage.java
+Starting at line 68 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\SplashActivity.java
+
+		});
+	}
+
+	@Override
+	public void onResume()
+	{
+		super.onResume();
+		baseLayout = (LinearLayout) findViewById(R.id.accountspage_base_layout);
+=====================================================================
+Found a 8 line (26 tokens) duplication in the following files: 
+Starting at line 26 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\SplashActivity.java
+Starting at line 26 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\DeletedTransactionsActivity.java
+Starting at line 26 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\DeletedBillsActivity.java
+
+	SharedPreferences preferences = null;
+	LinearLayout baseLayout;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState)
+	{
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_splash);
+=====================================================================
+Found a 4 line (26 tokens) duplication in the following files: 
+Starting at line 49 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\Newaccount_Page.java
+Starting at line 59 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\Newaccount_Page.java
+
+				error = error + "Balance is required";
+				Toast.makeText(getBaseContext(), error, Toast.LENGTH_LONG)
+						.show();
+			} else {
+=====================================================================
+Found a 4 line (26 tokens) duplication in the following files: 
+Starting at line 83 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\DatabaseHandler.java
+Starting at line 244 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\DatabaseHandler.java
+
+		SQLiteDatabase db = this.getWritableDatabase();
+		ContentValues values = new ContentValues();
+		values.put(KEY_NAME, account.getAccount_name());
+		values.put(KEY_balance, account.getBalance());
+=====================================================================
+Found a 7 line (25 tokens) duplication in the following files: 
+Starting at line 101 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\accountspage.java
+Starting at line 69 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\SplashActivity.java
+Starting at line 121 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\BillDetailActivty.java
+
+	}
+
+	@Override
+	public void onResume()
+	{
+		super.onResume();
+		baseLayout = (LinearLayout) findViewById(R.id.accountspage_base_layout);
+=====================================================================
+Found a 5 line (25 tokens) duplication in the following files: 
+Starting at line 40 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\ViewBillActivity.java
+Starting at line 47 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\SettingFragment.java
+Starting at line 48 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\MainPage.java
+Starting at line 51 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\Activitiespage.java
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup containter,
+			Bundle savedInstanceState)
+	{
+		return inflater.inflate(R.layout.activity_view_bill, containter, false);
+=====================================================================
+Found a 4 line (25 tokens) duplication in the following files: 
+Starting at line 30 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\Newaccount_Page.java
+Starting at line 31 of C:\Users\Viral\workspace\piggy_bank1\src\sicsr\proj\piggy_bank1\AlaramActivity.java
+
+		datasource = new DatabaseHandler(this);
+		// datasource.open();
+		SharedPreferences preference=getSharedPreferences(AppConstants.PIGGYBANKSAHREDPREFERNECE, this.MODE_PRIVATE);
+		baseLayout=(LinearLayout)findViewById(R.id.new_account_base_layout);
+=====================================================================
+Found a 9 line (25 tokens) duplication in the following files: 
+Starting at line 24 of C:\Users\Viral\workspace\piggy_bank1\src\proj\entities\Transactions.java
+Starting at line 18 of C:\Users\Viral\workspace\piggy_bank1\src\proj\entities\Limits.java
+Starting at line 45 of C:\Users\Viral\workspace\piggy_bank1\src\proj\entities\Bill.java
+Starting at line 19 of C:\Users\Viral\workspace\piggy_bank1\src\proj\entities\Accounts.java
+
+	}
+	public String getAccount_name() {
+		return account_name;
+	}
+	public void setAccount_name(String account_name) {
+		this.account_name = account_name;
+	}
+
+	public String getT_category() {
+=====================================================================
+Found a 11 line (25 tokens) duplication in the following files: 
+Starting at line 62 of C:\Users\Viral\workspace\piggy_bank1\src\proj\entities\Transactions.java
+Starting at line 50 of C:\Users\Viral\workspace\piggy_bank1\src\proj\entities\Accounts.java
+
+	}
+	public int getIsActive()
+	{
+		return isActive;
+	}
+	public void setIsActive(int isActive)
+	{
+		this.isActive = isActive;
+	}
+
+}

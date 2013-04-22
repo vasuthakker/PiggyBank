@@ -1,0 +1,140 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activitiespage_base_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context=".ViewBillActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:background="#000000"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/newtransaction"
+            android:layout_width="220dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical|center_horizontal|center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/blue_button_bg"
+            android:text="@string/add_new_transaction"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.1"
+        android:weightSum="1" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="0.5"
+            android:gravity="right"
+            android:text="Balance:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/totaltransactionbalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.5"
+            android:gravity="left"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="0.01"
+        android:background="#000000"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.1"
+        android:orientation="horizontal"
+        android:weightSum="1" >
+
+        <RadioButton
+            android:id="@+id/radioincome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:checked="true"
+            android:text="@string/inc"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/radioall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="all"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/radioexpense"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:text="@string/exp"
+            android:textSize="13sp" />
+
+    </RadioGroup>
+
+    <ListView
+        android:id="@+id/listactivity"
+        android:layout_width="match_parent"
+        android:layout_height="311dp"
+        android:layout_weight="0.4" >
+
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="0.01"
+        android:background="#000000"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0.07"
+        android:text="@string/activitie_delete" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0.2"
+        android:text="@string/acitivties_delete2" />
+
+</LinearLayout>
