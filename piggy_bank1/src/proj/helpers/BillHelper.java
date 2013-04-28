@@ -92,49 +92,6 @@ public class BillHelper {
 		return billList;
 	}
 
-	/*public static Bill fetchBillByName(Context context, String billName, int status)
-	{
-		Bill bill = null;
-		try
-		{
-			DatabaseHandler db = new DatabaseHandler(context);
-			Cursor cursor = db.fetchRecord(
-					TABLE_NAME,
-					null,
-					KEY_ID + "=? AND " + KEY_ISACTIVE + "=?",
-					new String[] { String.valueOf(billName),
-							String.valueOf(status) }, null, null, KEY_ID
-							+ " DESC");
-			while (cursor.moveToNext())
-			{
-				bill = new Bill();
-				bill.set_ID(cursor.getInt(cursor.getColumnIndex(KEY_ID)));
-				bill.setAccount_name(cursor.getString(cursor
-						.getColumnIndex(KEY_ACCOUNT_NAME)));
-				bill.setBill_amount(cursor.getDouble(cursor
-						.getColumnIndex(KEY_BILL_AMOUNT)));
-				bill.setBill_name(cursor.getString(cursor
-						.getColumnIndex(KEY_BILL_NAME)));
-				bill.setBill_no(cursor.getLong(cursor
-						.getColumnIndex(KEY_BILL_NO)));
-				bill.setDue_Date(cursor.getLong(cursor
-						.getColumnIndex(KEY_DUE_DATE)));
-				bill.setLast_Date(cursor.getLong(cursor
-						.getColumnIndex(KEY_LAST_DATE)));
-				bill.setReminder_status(cursor.getInt(cursor
-						.getColumnIndex(KEY_REMINDER_STATUS)));
-				bill.setIsPaid(cursor.getInt(cursor.getColumnIndex(KEY_IS_PAID)));
-				bill.setIsActive(cursor.getInt(cursor
-						.getColumnIndex(KEY_ISACTIVE)));
-				bill.setReminder_time(cursor.getLong(cursor
-						.getColumnIndex(KEY_REMINDER_TIME)));
-			}
-		} catch (Exception e)
-		{
-			e.printStackTrace();
-		}
-		return bill;
-	}*/
 
 	private static ContentValues setContentValuesForBill(Bill bill)
 	{
