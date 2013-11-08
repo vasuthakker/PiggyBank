@@ -151,5 +151,15 @@
     <string name="activitie_delete">click on item to view detail</string>
     <string name="acitivties_delete2">long click on item to delete it</string>
     <string name="restore">click on item to restore it</string>
+    <string name="totalbillamount">Total Bill Amount:</string>
+    <string name="dailylimit_greter_than_weeklylimit">Daily limit can\'t be greater than daily limit</string>
+    <string name="weeklylimit_greter_than_monthlylimit">Weekly limit can\'t be greater than monthly limit</string>
+    <string name="monthlimit_greter_than_yearlylimit">Monthly limit can\'t be greater than yearly limit</string>
+    <string name="limit_Saved">Limits are saved</string>
+    <string name="balance_title_text">Balance:</string>
+    <string name="radio_all">All</string>
+    <string name="due_date_for">Due Date For:</string>
+    <string name="title_activity_set_limits">SetLimitsActivity</string>
+    <string name="action_settings">Settings</string>
 
 </resources>

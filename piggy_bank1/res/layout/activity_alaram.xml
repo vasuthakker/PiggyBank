@@ -35,7 +35,7 @@
                     android:layout_weight="0.5"
                     android:gravity="right"
                     android:padding="10dp"
-                    android:text="Due Date For:"
+                    android:text="@string/due_date_for"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
 
                 <TextView
@@ -45,7 +45,6 @@
                     android:layout_weight="0.5"
                     android:gravity="left"
                     android:padding="10dp"
-                    android:text="Large Text"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
             </LinearLayout>
 
@@ -70,7 +69,6 @@
                     android:layout_weight="0.18"
                     android:gravity="left"
                     android:padding="10dp"
-                    android:text="Large Text"
                     android:textAppearance="?android:attr/textAppearanceLarge" />
 
             </LinearLayout>

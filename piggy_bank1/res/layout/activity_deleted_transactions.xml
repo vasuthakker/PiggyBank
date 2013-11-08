@@ -1,19 +1,18 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/delted_transaction_base_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:orientation="vertical"
-    android:weightSum="1"
     tools:context=".DeletedTransactionsActivity" >
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:layout_weight="0.1"
         android:padding="10dp"
         android:text="Deleted Transactions"
         android:textAppearance="?android:attr/textAppearanceLarge" />
@@ -22,31 +21,41 @@
         android:id="@+id/deleted_transactions_list_2"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.9" >
+        android:layout_above="@+id/view1"
+        android:layout_below="@+id/textView1" >
+
     </ListView>
 
     <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_weight="0.02"
-        android:background="#000000"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/activitie_delete"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/restore"
+            android:textColor="@color/black" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView2"
+    <View
+        android:id="@+id/view1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="0.04"
-        android:text="@string/activitie_delete" />
+        android:layout_height="1dp"
+        android:layout_above="@+id/linearLayout1"
+        android:layout_alignParentLeft="true"
+        android:background="@color/black" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="0.04"
-        android:text="@string/restore" />
-
-</LinearLayout>
+</RelativeLayout>
